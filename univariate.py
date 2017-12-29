@@ -45,4 +45,5 @@ def main():
         coefs[1] -= new_coefs[1]
     
     
-main()
+if __name__ == "__main__":
+    main()
