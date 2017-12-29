@@ -1,4 +1,7 @@
 import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as FuncAnimation
 
 def compute_residual(coefs, data):
     squared_residual = 0
