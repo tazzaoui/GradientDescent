@@ -2,6 +2,7 @@ import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as FuncAnimation
+import sys
 
 def compute_residual(coefs, data):
     squared_residual = 0
@@ -30,20 +31,22 @@ def plot_data(data, coefs,i):
     plt.show()
     
 def main():
-    filename = "brainhead.csv"
+    if(len(sys.argv) != 2):
+        print "ERROR: Please provide a dataset"
+        exit()
+    filename = sys.argv[1]
     data = np.loadtxt(open(filename,"rb"), delimiter=",")
     iter = 1500
     alpha = 0.001
     coefs = [0,0]
     for i in range(0,iter):
-        plot_data(data, coefs,i)
         print "Y = " + str(coefs[1]) + "x + " + str(coefs[0])
         print "Iteration: {}".format(i)
         print "Residual: {}".format(compute_residual(coefs, data))
         new_coefs = update_coefs(coefs, data, alpha)
         coefs[0] -= new_coefs[0]
         coefs[1] -= new_coefs[1]
-    
+    plot_data(data, coefs,i)
     
 if __name__ == "__main__":
     main()
