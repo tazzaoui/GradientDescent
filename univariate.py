@@ -29,3 +29,20 @@ def plot_data(data, coefs,i):
     plt.title("Hypothesis: Y = {}x + {}".format(coefs[1], coefs[0]))
     plt.show()
     
+def main():
+    filename = "brainhead.csv"
+    data = np.loadtxt(open(filename,"rb"), delimiter=",")
+    iter = 1500
+    alpha = 0.001
+    coefs = [0,0]
+    for i in range(0,iter):
+        plot_data(data, coefs,i)
+        print "Y = " + str(coefs[1]) + "x + " + str(coefs[0])
+        print "Iteration: {}".format(i)
+        print "Residual: {}".format(compute_residual(coefs, data))
+        new_coefs = update_coefs(coefs, data, alpha)
+        coefs[0] -= new_coefs[0]
+        coefs[1] -= new_coefs[1]
+    
+    
+main()
