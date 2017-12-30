@@ -3,7 +3,7 @@ An example to demonstrate the application of the Gradient Descent Algorithm in u
 
 | [![surface](images/surface.png)]() | [![output](images/output.gif)]()| [![contours](images/contours.png)]()|
 |:---:|:---:|:---:|
-| Cost Function: J(m,b) | Successive hypotheses (y = mx + b) | Contours of J(m,b)|
+| Cost Function: J(m,b) | Successive hypotheses (y = mx + b) after each iteration| Contours of J(m,b)|
 
 ### Dependencies
 Numpy for computation and Matplotlib for visualization
