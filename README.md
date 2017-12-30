@@ -1,5 +1,5 @@
 # GradientDescent
-An example to demonstrate the application of the Gradient Descent Algorithm in univariate regression problems. 
+An example to demonstrate the application of the Gradient Descent Algorithm to univariate regression problems. 
 
 | [![surface](images/surface.png)]() | [![output](images/output.gif)]()| [![contours](images/contours.png)]()|
 |:---:|:---:|:---:|
