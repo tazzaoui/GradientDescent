@@ -5,6 +5,7 @@ An example to demonstrate the application of the Gradient Descent Algorithm in u
 |:---:|:---:|:---:|
 | Cost Function: J(m,b) | Successive hypotheses (y = mx + b) after each iteration| Contours of J(m,b)|
 
+[For a brief explanation of the mathematics behind GD, see here](http://tahaazzaoui.com/writings/gradientDescent.html)
 ### Dependencies
 Numpy for computation and Matplotlib for visualization
 
